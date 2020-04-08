@@ -1,4 +1,4 @@
-# CTEC 227 - Lab 4: Build a Simple Image Gallery
+# Spring 2020: CTEC 227 - Lab 4: Build a Simple Image Gallery
 
 ## Details
 
@@ -22,5 +22,5 @@ You can [view a video](https://www.youtube.com/watch?v=t2V_8czWuxM) demonstratin
 | Images can be properly uploaded               | 10         | 5             | 0        |
 | Images display in the gallery                 | 25         | 13            | 0        |
 | Images can be successfully deleted using link | 25         | 13            | 0        |
-| Design is professional                        | 25         | 13            | 0        |
+| Design is professional and visually appealing | 25         | 13            | 0        |
 | A single PHP script was used for the project  | 15         | 7.5           | 0        |
