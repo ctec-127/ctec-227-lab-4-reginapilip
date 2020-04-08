@@ -4,10 +4,12 @@
 
 Using the PHP code examples provided in this module, **build a single page PHP app** that does the following:
 
-- Allows users to upload images
-- Displays the images on the page as a "gallery"
-- Provide a link below each picture that allows you to delete the image
-- Style your page in a professional way
+- Allows a user to upload images, one at a time
+- Displays the images on the page as a gallery
+- Provides a link below each picture that allows you to delete the image from the gallery
+- Style your page in a professional way. You should develop this lab to include in your portfolio of work.
+- The use of Boostrap is optional.
+- You can use CSS grid and flexbox
 - Push your code to GitHub
 - Students will be demoing their code to the class the day after the lab is due
 
@@ -15,10 +17,10 @@ You can [view a video](https://www.youtube.com/watch?v=t2V_8czWuxM) demonstratin
 
 ## Grading Rubric
 
-| Item | Full Marks | Partial Marks | No Marks |
-|:--|:--|:--|:--|
-|Images can be properly uploaded| 15 | 8 | 0 |
-|Images display in a gallery| 25 | 13 | 0 |
-|Images can be successfully deleted using link| 25 | 13 | 0 |
-|Professional design| 25 | 13 | 0 |
-|HTML/CSS Validate| 10 | 5 | 0 |
+| Item                                          | Full Marks | Partial Marks | No Marks |
+| :-------------------------------------------- | :--------- | :------------ | :------- |
+| Images can be properly uploaded               | 10         | 5             | 0        |
+| Images display in the gallery                 | 25         | 13            | 0        |
+| Images can be successfully deleted using link | 25         | 13            | 0        |
+| Design is professional                        | 25         | 13            | 0        |
+| A single PHP script was used for the project  | 15         | 7.5           | 0        |
