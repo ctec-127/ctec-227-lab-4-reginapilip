@@ -18,11 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 email,
                 password)
             VALUES (
-                $firstName,
-                $lastName,
-                $username,
-                $email,
-                $password)";
+                '$firstName',
+                '$lastName',
+                '$username',
+                '$email',
+                '$password')";
     
     echo $sql;
 
