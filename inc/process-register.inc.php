@@ -29,15 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     // query the db
     $result = $db->query($sql);
 
+    // error handling
     if (!$result) {
         echo $db->error . "<br>";
         echo "<div>
                 <h1>There was a problem registering your account. Try again.</h1>
               </div>";
     } else {
+        // build a confirmation message with a button that takes them to the login page OR
+        // redirect user to login page with a message on the page, asking them to login and that their account creation was successful
         echo "<div>
                 <h1>You're good to go! Now, log in please.</h1>
-                <button class=\"btn btn-info\"><a href=\"login.php\" id=\"login\">Login</a></button>
+                <button class=\"btn btn-info\"><a href=\"../login.php\" id=\"login\">Login</a></button>
               </div>";
     }
 }

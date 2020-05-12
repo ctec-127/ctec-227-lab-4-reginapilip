@@ -1,12 +1,12 @@
 <?php // welcome.php
-$pageTitle = "Welcome";
+$pageTitle = "Register";
 require_once "inc/layout/header.inc.php";
 ?>
 
 <div class="app-registration">
     <!-- form for registration -->
     <!-- form processed on register.inc.php -->
-    <form action="inc/register.inc.php" method="POST" id="registration-form">
+    <form action="inc/process-register.inc.php" method="POST" id="registration-form">
         <div class="form-group">
         <label for="first_name">First Name</label>
         <input class="form-control" type="text" id="first_name" required name="first_name"></div>
