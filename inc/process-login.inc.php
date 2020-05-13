@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 username='$username' AND
                 password='$password'";
     
-    echo $sql;
+    // echo $sql;
 
     // query the db
     $result = $db->query($sql);

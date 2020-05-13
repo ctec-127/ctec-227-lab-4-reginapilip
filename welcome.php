@@ -18,7 +18,7 @@ require_once "inc/layout/header.inc.php";
 
         <div class="form-group">
         <label for="username">Username</label>
-        <input class="form-control" type="text" id="username" required name="username">
+        <input class="form-control registration-username" type="text" id="username" required name="username">
         </div>
 
         <div class="form-group">
@@ -32,13 +32,13 @@ require_once "inc/layout/header.inc.php";
         </div>
         
         <div class="form-group">
-        <button class="btn btn-info" type="submit">Register</button>
+        <button class="btn btn-info" type="submit" onclick="testInfo(document.getElementById('username'));">Register</button>
         </div>
     </form>
 </div>
 <div class="account-links">
     <button class="btn btn-info"><a href="login.php" id="login">Login</a></button>
-    <button class="btn btn-outline-info"><a href="#" id="logout">Logout -- tbdone w/ js</a></button>
+    <button class="btn btn-outline-info"><a href="#" id="logout">Logout -- to be done w/ js</a></button>
 </div>
 
 <?php require_once "inc/layout/footer.inc.php" ?>
