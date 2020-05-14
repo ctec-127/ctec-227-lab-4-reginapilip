@@ -1,5 +1,7 @@
 <?php // register.php
 // this processes the register form on welcome.php
+$pageTitle = "Welcome!";
+// require_once 'layout/header.inc.php';
 require_once 'db/db_connect.inc.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -36,14 +38,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <h1>There was a problem registering your account. Try again.</h1>
               </div>";
     } else {
-        // build a confirmation message with a button that takes them to the login page OR
         // redirect user to login page with a message on the page, asking them to login and that their account creation was successful
-        echo "<div>
-                <h1>You're good to go! Now, log in please.</h1>
-                <button class=\"btn btn-info\"><a href=\"../login.php\" id=\"login\">Login</a></button>
-              </div>";
+        // echo "<div class=\"container\">
+        //         <div class=\"row\">
+        //             <div class=\"col-12\">
+        //             <h1>You're good to go! Now, log in please.</h1>
+        //             <button class=\"btn btn-info\"><a href=\"../login.php\" id=\"login\">Login</a></button>
+        //         </div>
+        //       </div>
+        //     </div>";
+        header("Location: ../login.php");
     }
 }
 
+// require_once 'layout/footer.inc.php';
 
 ?>

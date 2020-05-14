@@ -144,3 +144,21 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
+.referrer-note {
+    margin-bottom: 0.5em;
+    color: var(--clr-teal);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#bad-username {
+    display: none;
+}
+
+.bad-username {
+    display: inline;
+    margin-left: 0.25em;
+    color: red;
+    font-size: 0.7rem;
+}

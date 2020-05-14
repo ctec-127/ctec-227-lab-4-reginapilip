@@ -5,9 +5,9 @@ require_once 'inc/process-login.inc.php';
 
 // checking if referred from registration page
 // echo basename($_SERVER['HTTP_REFERER']);
-if (isset($_SERVER['HTTP_REFERER']) && basename($_SERVER['HTTP_REFERER']) == 'process-register.inc.php') {
+if (isset($_SERVER['HTTP_REFERER']) && basename($_SERVER['HTTP_REFERER']) == 'welcome.php') {
     // build message
-    echo "You came from registration!";
+    echo '<p class="referrer-note">Account successfully created. Please login now.</p>';
 }
 ?>
 

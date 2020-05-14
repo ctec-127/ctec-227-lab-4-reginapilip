@@ -18,6 +18,7 @@ require_once "inc/layout/header.inc.php";
 
         <div class="form-group">
         <label for="username">Username</label>
+        <span id="bad-username">Choose another username - only letters allowed</span>
         <input class="form-control registration-username" type="text" id="username" required name="username">
         </div>
 
@@ -32,7 +33,7 @@ require_once "inc/layout/header.inc.php";
         </div>
         
         <div class="form-group">
-        <button class="btn btn-info" type="submit" onclick="testInfo(document.getElementById('username'));">Register</button>
+        <button class="btn btn-info" type="submit">Register</button>
         </div>
     </form>
 </div>

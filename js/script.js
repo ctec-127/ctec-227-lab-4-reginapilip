@@ -1,28 +1,32 @@
-// get a handle on the username input and form
+// get a handle on the form
 const form = document.querySelector('#registration-form')
-const username = document.querySelector(".registration-username")
+// get a handle on input to be tested
+const input = document.querySelector(".registration-username")
+// specify characters to be searched 
+// (use regexr.com or regex101.com to help you define your search pattern)
+const regex = /[\s\.\-\/\,\\\@]/gi
 
-// assign characters that aren't allowed
-// checks for
-//     spaces
-//     .
-//     -
-//     /
-//     ,
-//     \
-const regex = /[\s\.\-\/\,\\]/gi
+const error_msg = document.querySelector('#bad-username')
 
-// check
-function checkUsername(username) {
+function checkFormInput(inputString, regex) {
+    // add an event listener to the form
     form.addEventListener('submit', (e) => {
-        const match = regex.exec(username.value)
+        // match executes a search on string using the regex variable's specs 
+        const match = regex.exec(inputString.value)
+
+        // if there's no match - you're good
         if (!match) {
-            console.log(username.value + 'is a good username.')
+            console.log(inputString.value + ' - PASS')
+            // error_msg.classList.remove('bad-username')
         } else {
+            // don't allow submission 
             e.preventDefault()
-            console.error(username.value + ' isn\'t a good username - don\'t use special characters')
+            // ask user to change their input
+            console.error(`${inputString.value} - FAIL`)
+            error_msg.classList.add('bad-username')
         }
     })
 }
 
-checkUsername(username)
+// call function
+checkFormInput(username, regex)
