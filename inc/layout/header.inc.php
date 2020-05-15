@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,11 @@
 </head>
 <body>
     <header class="site-header">
+        <div class="log-session">
+            <a href="login.php" id="login">Login</a>
+            <a href="" id="logout">Logout</a>
+            <div id="message"></div>
+        </div>
         <div class="logo">
             <img src="img/upload-logo.png" alt="Upload logo" >
         </div>

@@ -1,6 +1,11 @@
 <?php 
 // if file exists, display file
-$dir = "uploads";
+// $dir = "uploads";
+if (isset($_SESSION['username'])) {
+    $dir = 'uploads/' . $_SESSION['username'];
+} else {
+    $dir = 'uploads';
+}
 $trashCan = "<div class=\"trash-can\">
     <div class=\"icon\">
         <div class=\"lid\"></div>

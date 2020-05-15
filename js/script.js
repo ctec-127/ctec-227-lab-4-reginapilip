@@ -1,3 +1,33 @@
+//#region logout functionality
+fetch('helper/is_logged_in.php')
+    .then(res => res.json()) // don't need?
+    .then(function (res) {
+        if (res.status == 'yes') {
+            const login = document.querySelector('#login')
+            login.style.display = 'none'
+            const logout = document.querySelector('#logout')
+            logout.style.display = 'inline-block'
+
+            logout.addEventListener('click', function (e) {
+                e.preventDefault()
+                fetch('helper/logout_ajax.php')
+                    .then(res => res.json()) // need?
+                    .then(function (res) {
+                        if (res.status == 'success') {
+                            window.location.href = "login.php"
+                            // login.style.display = 'inline-block'
+                            // logout.style.display = 'none'
+                            // document.querySelector('#message').innerHTML = '<p>You have been logged out.</p>'
+                        }
+                    })
+            })
+        }
+    })
+
+//#endregion
+
+
+//#region check username function
 // get a handle on the form
 const form = document.querySelector('#registration-form')
 // get a handle on input to be tested
@@ -29,4 +59,6 @@ function checkFormInput(inputString, regex) {
 }
 
 // call function
-checkFormInput(username, regex)
+checkFormInput(input, regex)
+
+//#endregion

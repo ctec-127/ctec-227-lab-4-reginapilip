@@ -5,7 +5,7 @@ require_once "inc/layout/header.inc.php";
 
 <div class="app-registration">
     <!-- form for registration -->
-    <!-- form processed on register.inc.php -->
+    <!-- form processed on process-register.inc.php -->
     <form action="inc/process-register.inc.php" method="POST" id="registration-form">
         <div class="form-group">
         <label for="first_name">First Name</label>
@@ -39,7 +39,7 @@ require_once "inc/layout/header.inc.php";
 </div>
 <div class="account-links">
     <button class="btn btn-info"><a href="login.php" id="login">Login</a></button>
-    <button class="btn btn-outline-info"><a href="#" id="logout">Logout -- to be done w/ js</a></button>
+    <!-- <button class="btn btn-outline-info"><a href="#" id="logout">Logout -- to be done w/ js</a></button> -->
 </div>
 
 <?php require_once "inc/layout/footer.inc.php" ?>

@@ -1,6 +1,13 @@
 <?php // gallery.php
+session_start();
 $pageTitle = "Build Your Gallery";
+
+// block unauthorized users
+require_once 'inc/functions/functions.inc.php';
+// blockUser();
+
 // header
+// session start here - rn it is in header
 require_once "inc/layout/header.inc.php";
 // app usage instructions
 require_once "inc/layout/instructions.inc.php";
