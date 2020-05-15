@@ -24,7 +24,7 @@ if (is_dir($dir)) {
             // .ds_store file - for Mac OS only
             if (!(is_dir($filename)) && $filename != ".ds_store") {
                 echo "<div class=\"photo-upload\">";
-                echo "<img src=\"uploads/{$filename}\" alt=\"your uploaded image\" height=\"200\">";
+                echo "<img src=\"uploads/{$_SESSION['username']}/{$filename}\" alt=\"your uploaded image\" height=\"200\">";
                 // echo "<div class=\"delete-link\"><a href=\"?file={$filename}\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a></div>";                
                 echo "<div class=\"delete-link\"><a href=\"?file={$filename}\">{$trashCan}</a></div>";
                 echo "</div>";

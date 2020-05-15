@@ -14,10 +14,10 @@ fetch('helper/is_logged_in.php')
                     .then(res => res.json()) // need?
                     .then(function (res) {
                         if (res.status == 'success') {
-                            window.location.href = "login.php"
-                            // login.style.display = 'inline-block'
-                            // logout.style.display = 'none'
+                            login.style.display = 'inline-block'
+                            logout.style.display = 'none'
                             // document.querySelector('#message').innerHTML = '<p>You have been logged out.</p>'
+                            window.location.href = "login.php"
                         }
                     })
             })

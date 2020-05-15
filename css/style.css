@@ -18,6 +18,18 @@ a {
     color: rgb(3, 54, 54)
 }
 
+.btn a {
+    color: white;
+}
+
+.outline-btn a {
+    color: black;
+}
+
+.outline-btn a:hover {
+    color: white;
+}
+
 body {
     font-family: 'Manrope', sans-serif;
     max-width: 800px;
@@ -25,6 +37,10 @@ body {
 }
 
 h1 {
+    color: var(--clr-teal);
+}
+
+.header-motto {
     letter-spacing: 8px;
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -53,13 +69,16 @@ h1 {
     /* border: black solid 1px; */
 }
 
-.logout {
+.log-session {
     align-self: flex-end;
     font-weight: 700;
     margin-top: 0.25em;
 }
 
-.logout a {
+.log-session a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     color: teal;
 }
 
@@ -101,6 +120,10 @@ input[type="file"] {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
+}
+
+.instructions {
+    margin-top: 100px;
 }
 
 .instructions__steps {
@@ -172,4 +195,40 @@ footer {
     margin-left: 0.25em;
     color: red;
     font-size: 0.7rem;
+}
+
+.container-app-info {
+    margin: 150px auto 220px auto;
+}
+
+.txt-app-info {
+    font-size: 1.2rem;
+    color: var(--clr-teal);
+}
+
+.btn-app-info {
+    width: 80%;
+}
+
+.container-app-info .clm-1 {
+    border-right: 2px solid var(--clr-light-teal);
+}
+
+.registration-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 1em;
+}
+
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-links {
+    margin-left: 1em;
 }

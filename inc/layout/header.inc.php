@@ -18,9 +18,9 @@
             <div id="message"></div>
         </div>
         <div class="logo">
-            <img src="img/upload-logo.png" alt="Upload logo" >
+            <a href="login.php"><img src="img/upload-logo.png" alt="Upload logo" ></a>
         </div>
         <div class="motto">
-            <h1>Build Your Gallery</h1>
+            <h1 class="header-motto">Build Your Gallery</h1>
         </div>
     </header>
