@@ -7,6 +7,7 @@ require_once "inc/layout/header.inc.php";
     <!-- form for registration -->
     <!-- form processed on process-register.inc.php -->
     <div class="registration-form-container">
+        <div data-errors></div>
         <form action="inc/process-register.inc.php" method="POST" id="registration-form">
             <div class="form-group">
             <label for="first_name">First Name</label>
@@ -19,7 +20,7 @@ require_once "inc/layout/header.inc.php";
 
             <div class="form-group">
             <label for="username">Username</label>
-            <span id="bad-username">Choose another username - only letters allowed</span>
+            <span [data-username]>Choose another username - only letters allowed</span>
             <input class="form-control registration-username" type="text" id="username" required name="username">
             </div>
 

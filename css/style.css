@@ -186,15 +186,16 @@ footer {
     font-size: 30px;
 }
 
-#bad-username {
+[data-username] {
     display: none;
 }
 
 .bad-username {
-    display: inline;
+    /* display: inline; */
     margin-left: 0.25em;
     color: red;
     font-size: 0.7rem;
+    display: none;
 }
 
 .container-app-info {

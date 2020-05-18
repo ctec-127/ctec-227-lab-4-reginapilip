@@ -30,4 +30,7 @@ echo '<div class="login-form-container">';
     </form>
 <?php 
 echo '</div>';
+require_once "inc/layout/footer.inc.php";
 ?>
+
+

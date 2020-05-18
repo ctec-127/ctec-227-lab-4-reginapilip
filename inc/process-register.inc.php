@@ -55,6 +55,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         //     </div>";
     }
 }
-
-
 ?>
+<script src="input-check.js"></script>

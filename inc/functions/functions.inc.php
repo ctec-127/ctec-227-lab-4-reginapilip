@@ -7,6 +7,8 @@ function moveFile() {
     $tmp_file = $_FILES['file_upload']['tmp_name'];
     $upload_dir = 'uploads/' . $_SESSION['username'];
     $target_file = basename($_FILES['file_upload']['name']);
+
+    // to be implemented later - allows duplicate uploads
     // $newFileName = 1;
 
     // check if file exists 
