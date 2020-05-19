@@ -35,7 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // redirect user to their gallery page
         header('location: ../gallery.php');
     } else {
-        echo "<p>Please try again or go away</p>";
+        // this redirects them but no session variable 
+        // shows a different version of gallery.php
+        header('location: ../gallery.php');
+        // echo "<p>Please try again or go away</p>";
     }
 }
 ?>

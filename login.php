@@ -4,9 +4,9 @@ require_once 'inc/layout/header.inc.php';
 require_once 'inc/process-login.inc.php';
 
 echo '<div class="login-form-container">';
-    // checking if referred from registration page
-    // echo basename($_SERVER['HTTP_REFERER']);
-    if (isset($_SERVER['HTTP_REFERER']) && basename($_SERVER['HTTP_REFERER']) == 'welcome.php') {
+    // checking if account registered successfully
+    // displays success message
+    if (isset($_GET['message']) && $_GET['message'] == 'registered') {
         // build message
         echo '<p class="referrer-note">Account successfully created. Please login now.</p>';
     }
@@ -28,8 +28,17 @@ echo '<div class="login-form-container">';
             <button class="btn btn-info" type="submit">Log In</button>
         </div>
     </form>
+    
+    <div class="account-msg">
+        <p>Don't have an account? <a href="welcome.php">Please register.</a></p>
+    </div>
+
+    
 <?php 
 echo '</div>';
+?>
+
+<?php
 require_once "inc/layout/footer.inc.php";
 ?>
 

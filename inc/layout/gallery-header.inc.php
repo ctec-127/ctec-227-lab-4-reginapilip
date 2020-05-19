@@ -11,17 +11,14 @@
     <link rel="stylesheet" href="css/trash-icon.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="log-session">
+    <header class="gallery-header">
+        <div class="logo">
+            <a href="login.php"><img src="img/upload-logo.png" alt="Upload logo"></a>
+        </div>
+        <div class="gallery-log-session">
             <a href="login.php" id="login">Login</a>
             <a href="" id="logout">Logout</a>
             <div id="message"></div>
-        </div>
-        <div class="logo">
-            <a href="login.php"><img src="img/upload-logo.png" alt="Upload logo" ></a>
-        </div>
-        <div class="motto">
-            <h1 class="header-motto">Build Your Gallery</h1>
         </div>
     </header>
 

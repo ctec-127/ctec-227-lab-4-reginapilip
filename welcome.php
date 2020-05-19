@@ -7,7 +7,20 @@ require_once "inc/layout/header.inc.php";
     <!-- form for registration -->
     <!-- form processed on process-register.inc.php -->
     <div class="registration-form-container">
-        <div data-errors></div>
+        <div class="message-area">
+            <?php 
+            if (isset($_GET['message']) && $_GET['message'] == 'error') {
+                echo '<div class="error-msg">';
+                echo '<p>Please try registering again. Try using another username and email.</p>';
+                echo '</div>';
+            } else {
+                echo '<div class="welcome-msg">';
+                echo '<p>Welcome to Upload. To begin building your gallery, please register. Have an account already? <a href="login.php">Go ahead and log in.</a></p>';
+                echo '</div>'; 
+            }
+            ?>
+        </div>
+    
         <form action="inc/process-register.inc.php" method="POST" id="registration-form">
             <div class="form-group">
             <label for="first_name">First Name</label>
@@ -20,7 +33,7 @@ require_once "inc/layout/header.inc.php";
 
             <div class="form-group">
             <label for="username">Username</label>
-            <span [data-username]>Choose another username - only letters allowed</span>
+            <span data-username data-message>Choose another username - only letters allowed</span>
             <input class="form-control registration-username" type="text" id="username" required name="username">
             </div>
 
@@ -39,10 +52,11 @@ require_once "inc/layout/header.inc.php";
             </div>
         </form>
     </div>
-        <div class="account-links">
-            <button class="btn btn-info"><a href="login.php" id="login">Login</a></button>  
-        </div>
+    
+    <div class="account-msg">
+        <p class="account-msg-text">Already have an account? <a href="login.php">Please login.</a></p>
+    </div>
 
 </div>
-
+<script src="js/input-check.js"></script>
 <?php require_once "inc/layout/footer.inc.php" ?>

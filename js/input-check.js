@@ -7,8 +7,8 @@ const input = document.querySelector(".registration-username")
 // (use regexr.com or regex101.com to help you define your search pattern)
 const regex = /[\s\.\-\/\,\\\@]/gi
 
-// get a handle on error bucket
-const error_msg = document.querySelector('#bad-username')
+// get a handle on error span message
+const error_msg = document.querySelector('[data-message]')
 
 function checkFormInput(inputString, regex) {
     // add an event listener to the form
@@ -22,6 +22,9 @@ function checkFormInput(inputString, regex) {
         } else {
             // don't allow submission 
             e.preventDefault()
+            // show error message
+            error_msg.classList.add('bad-username')
+            input.focus()
             // ask user to change their input
             console.error(`${inputString.value} - FAIL`)
         }

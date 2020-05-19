@@ -4,8 +4,8 @@
             <p class="txt-app-info">Please log in to build your gallery.</p>
         </div>
         <div class="col-6">
-            <div><button class="btn btn-outline-info mb-2 btn-app-info outline-btn"><a href="./login.php">Login</a></button></div>
-            <div><button class="btn btn-info btn-app-info"><a href="./welcome.php">Register</a></button></div>
+            <div><a href="./login.php"><button class="btn btn-outline-info mb-2 btn-app-info outline-btn">Login</button></a></div>
+            <div><a href="./welcome.php"><button class="btn btn-info btn-app-info">Register</button></a></div>
         </div>
     </div>
 </div>

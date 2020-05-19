@@ -14,8 +14,13 @@
     box-sizing: border-box;
 }
 
+.main-contents {
+    height: 100vh;
+}
+
 a {
-    color: rgb(3, 54, 54)
+    color: rgb(4, 99, 99);
+    font-weight: bold;
 }
 
 .btn a {
@@ -64,8 +69,26 @@ h1 {
     /* border: 1px solid black; */
 }
 
+.gallery-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 3em;
+    /* border: 1px solid black; */
+}
+
+.gallery-header .logo img {
+    height: 100px;
+}
+
 .logo img {
     height: 200px;
+    /* border: black solid 1px; */
+}
+
+.gallery-log-session {
+    font-weight: 700;
+    margin-top: 0.25em;
     /* border: black solid 1px; */
 }
 
@@ -73,9 +96,10 @@ h1 {
     align-self: flex-end;
     font-weight: 700;
     margin-top: 0.25em;
+    /* border: black solid 1px; */
 }
 
-.log-session a {
+.log-session a, .gallery-log-session {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -88,7 +112,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3em;
+    /* margin-bottom: 3em; */
 }
 
 form {
@@ -152,7 +176,7 @@ li {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin-bottom: 3em;
+    /* margin-bottom: 3em; */
 }
 
 .photo-upload {
@@ -191,11 +215,10 @@ footer {
 }
 
 .bad-username {
-    /* display: inline; */
+    display: inline;
     margin-left: 0.25em;
     color: red;
     font-size: 0.7rem;
-    display: none;
 }
 
 .container-app-info {
@@ -218,9 +241,13 @@ footer {
 .registration-form-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     margin-left: 1em;
+}
+
+.account-msg-text {
+    text-align: right;
 }
 
 .login-form-container {
@@ -230,6 +257,19 @@ footer {
     justify-content: center;
 }
 
-.account-links {
+/* .account-links {
     margin-left: 1em;
+} */
+
+.account-msg {
+    align-self: flex-end;
+    font-size: 0.9rem;
+}
+
+.message-area {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: var(--clr-dark-teal-tp);
+    padding-left: 20px;
+    border-left: 2px solid var(--clr-light-teal)
 }

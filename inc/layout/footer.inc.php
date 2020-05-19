@@ -1,3 +1,4 @@
+</div> <!-- end main contents -->
     <footer>
         <p>&copy; 2020</p> 
         <p>Created by <b>Regina Pilipchuk</b></p>

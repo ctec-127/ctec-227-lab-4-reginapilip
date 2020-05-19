@@ -1,26 +1,29 @@
 <?php // functions.inc.php
 
-
 // new move file
-function moveFile() {
+function moveFile() {  
+    // $upload_errors = array(
+    //     UPLOAD_ERR_OK => "No errors!",
+    //     UPLOAD_ERR_INI_SIZE => "Your file is too large!",
+    //     UPLOAD_ERR_FORM_SIZE => "Your file is too large!",
+    //     UPLOAD_ERR_PARTIAL => "Uploaded partially",
+    //     UPLOAD_ERR_NO_FILE => "No file to upload",
+    //     UPLOAD_ERR_NO_TMP_DIR => "No folder found",
+    //     UPLOAD_ERR_CANT_WRITE => "Can't write to disk",
+    //     UPLOAD_ERR_EXTENSION => "File upload stopped by extension");  
     // check if file already exists and 
     $tmp_file = $_FILES['file_upload']['tmp_name'];
     $upload_dir = 'uploads/' . $_SESSION['username'];
     $target_file = basename($_FILES['file_upload']['name']);
 
-    // to be implemented later - allows duplicate uploads
-    // $newFileName = 1;
-
-    // check if file exists 
-    // if (file_exists($tmp_file)) {
-    //     $tmp_file = $newFileName++ . $tmp_file;
-    //     move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file);
-    // } else {
-    //     move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file);
-    // }
-
     // move file from tmp dir to perm dir
     move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file);
+    // if (move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file)) {
+    //     $message = "file uploaded";
+    // } else {
+    //     $error = $_FILES['file_upload']['error'];
+    //     $message = $upload_errors[$error];
+    // }
 }
 
 function showMessage() {

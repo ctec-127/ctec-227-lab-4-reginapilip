@@ -5,7 +5,7 @@ $pageTitle = "Build Your Gallery";
 require_once 'inc/functions/functions.inc.php';
 
 // header
-require_once "inc/layout/header.inc.php";
+require_once "inc/layout/gallery-header.inc.php";
 // block unauthorized users
 if (!isset($_SESSION['loggedin'])) {
     // echo "<p>log in to see your gallery</p>";

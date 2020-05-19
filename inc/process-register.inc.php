@@ -32,17 +32,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     // error handling
     if (!$result) {
-        echo $db->error . "<br>";
-        echo "<div>
-                <h1>There was a problem registering your account. Try again.</h1>
-              </div>";
+        // can add logic here to handle different db errors
+        // echo $db->error . "<br>";
+        // echo "<div>
+        //         <h1>There was a problem registering your account. Try again.</h1>
+        //       </div>";
+        header("Location: ../welcome.php?message=error");
     } else {
         // create a user folder
         if (!is_dir($username)) {
             mkdir('../uploads/' . $username);
         }
         // redirect user to login page with a message on the page, asking them to login and that their account creation was successful
-        header("Location: ../login.php");
+        header("Location: ../login.php?message=registered");
 
 
         // echo "<div class=\"container\">
